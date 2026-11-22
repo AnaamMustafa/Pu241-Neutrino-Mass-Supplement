@@ -2,13 +2,14 @@
 Supplementary plots and analysis materials for the Pu-241 neutrino mass paper.
 ## Additional plots (`Plots paper/`)
 
-The paper shows Figs. 1, 3, 4 and 5 for a true neutrino mass of 0.2 eV. This folder has the same four plots for other true masses: 0, 50, 100 and 150 meV. The mass is in the file name (`mnu050meV` means m_ν^true = 0.05 eV). Constants, energy grid, spectrum model and the 90% CL procedure are the same for all plots.
+This folder has the same four plots as Figs. 1, 3, 4 and 5 of the paper, but for other true neutrino masses: 0, 50, 100 and 150 meV. The paper's own figures (m_ν^true = 0.2 eV) are not included here. The mass is in the file name, so `mnu050meV` means m_ν^true = 0.05 eV.
 
-- **`fig1_betaspectrum_*`: spectral decomposition near the endpoint.** The tritium spectrum and the Pu-241 spectrum are shown with the Pu-241 source normalized by its total activity. The U-237 background is shown for background suppression factors f_bg = 1, 10, 100 and 1000. This shows how the background compares with the signal in the last tens of eV.
-- **`fig3_sensitivity_*`: expected 90% CL upper limit versus energy resolution σ_e** for Pu-241 and tritium. Left panel: equal total activity. Right panel: equal activity in the endpoint region. Higher background suppression gives a better limit.
-- **`fig4_pumass_scan_*`: how much extra Pu-241 is needed to match tritium.** Shows the upper limit as a function of the Pu-241 amount (activity) compared with the tritium reference, for f_bg = 10 and 100, at different energy resolutions. The crossing point shows the activity at which Pu-241 becomes as sensitive as tritium.
-- **`fig5_sensitivity_ratio_*` (made with `extra_sensitivity_ratio_plots.py`): sensitivity ratio UL_Pu/UL_T** with the endpoint normalization N_Pu·C_Pu = N_T·C_T, which corresponds to about 206 µg of Pu-241 versus 1 µg of tritium (3-year exposure). Left: heatmap of the ratio versus σ_e and f_bg, with contours at 1.05, 1.1, 1.2 and 1.5. Right: the ratio versus σ_e for fixed f_bg. A ratio of 1 means equal sensitivity, and a ratio above 1 means tritium is better.
+- `fig1_betaspectrum_*`: Pu-241 and tritium spectra near the endpoint, with the U-237 background for background suppression f_bg = 1, 10, 100 and 1000.
+- `fig3_sensitivity_*`: expected 90% CL upper limit versus energy resolution σ_e for Pu-241 and tritium, at equal total activity (left) and equal endpoint activity (right).
+- `fig4_pumass_scan_*`: extra Pu-241 activity needed to match the tritium sensitivity, for f_bg = 10 and 100.
+- `fig5_sensitivity_ratio_*`: ratio UL_Pu/UL_T at equal endpoint activity (about 206 µg of Pu-241 versus 1 µg of tritium), as a heatmap in σ_e and f_bg (left) and versus σ_e at fixed f_bg (right). A ratio above 1 means tritium is more sensitive.
 
+All plots use the same constants, energy grid, spectrum model and 90% CL procedure. `pu241_vs_tritium_sensitivity.py` produces the paper's Figs. 1–5, and `extra_sensitivity_ratio_plots.py` makes the ratio plots for other masses (`python3 extra_sensitivity_ratio_plots.py 0.15`). 
 **Scripts**
 - `pu241_vs_tritium_sensitivity.py` produces Figs. 1–5 of the paper (m_ν^true = 0.2 eV).
 
