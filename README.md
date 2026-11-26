@@ -9,7 +9,5 @@ This folder has the same four plots as Figs. 1, 3, 4 and 5 of the paper, but for
 - `fig4_pumass_scan_*`: extra Pu-241 activity needed to match the tritium sensitivity, for f_bg = 10 and 100.
 - `fig5_sensitivity_ratio_*`: ratio UL_Pu/UL_T at equal endpoint activity (about 206 µg of Pu-241 versus 1 µg of tritium), as a heatmap in σ_e and f_bg (left) and versus σ_e at fixed f_bg (right). A ratio above 1 means tritium is more sensitive.
 
-All plots use the same constants, energy grid, spectrum model and 90% CL procedure. `pu241_vs_tritium_sensitivity.py` produces the paper's Figs. 1–5, and `extra_sensitivity_ratio_plots.py` makes the ratio plots for other masses (`python3 extra_sensitivity_ratio_plots.py 0.15`). 
-**Scripts**
-- `pu241_vs_tritium_sensitivity.py` produces Figs. 1–5 of the paper (m_ν^true = 0.2 eV).
+All plots use the same constants, energy grid, spectrum model and 90% CL procedure. `pu241_vs_tritium_sensitivity.py` produces the paper's Figs. 1–5 (m_ν^true = 0.2 eV).
 
